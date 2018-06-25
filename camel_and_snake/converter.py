@@ -5,14 +5,47 @@ class Converter:
 
     @classmethod
     def camelify(cls, obj):
+        """
+        将对象中 dict 的 key cameCase 化
+        如果传入的对象不是字典、元组、列表之一，它将直接被返回
+
+        Arguments:
+            obj {any} -- 原对象
+
+        Returns:
+            convert_obj -- 转换后的对象
+        """
+
         return cls.__convert(obj, target='camel')
 
     @classmethod
     def snakeify(cls, obj):
+        """
+        将对象中 dict 的 key snake_case 化
+        如果传入的对象不是字典、元组、列表之一，它将直接被返回
+
+        Arguments:
+            obj {any} -- 原对象
+
+        Returns:
+            convert_obj -- 转换后的对象
+        """
         return cls.__convert(obj, target='snake')
 
     @classmethod
     def __convert(cls, obj, target='camel'):
+        """转换方法
+
+        Arguments:
+            obj {any} -- 原对象
+
+        Keyword Arguments:
+            target {str} -- 目标 (default: {'camel'})
+
+        Returns:
+            convert_obj -- 转换后的对象
+        """
+
         # 传入对象非字典列表元祖之一，直接返回
         if type(obj) != dict and type(obj) != list and type(obj) != tuple:
             return obj
