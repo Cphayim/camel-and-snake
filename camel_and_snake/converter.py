@@ -2,6 +2,7 @@ import re
 
 
 class Converter:
+
     @classmethod
     def camelify(cls, obj):
         return cls.__convert(obj, target='camel')
@@ -30,7 +31,7 @@ class Converter:
 
                 value = obj[old_key]
                 # 对值进行递归处理
-                convert_dict[new_key] = cls.converter(value)
+                convert_dict[new_key] = cls.__convert(value, target=target)
 
             return convert_dict
 
@@ -41,6 +42,6 @@ class Converter:
 
             for item in obj:
                 # 遍历每个元素，进行递归处理
-                convert_list.append(cls.converter(item))
+                convert_list.append(cls.__convert(item, target=target))
 
             return convert_list
