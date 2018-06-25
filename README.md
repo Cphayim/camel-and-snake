@@ -44,7 +44,7 @@ dict_obj = {
     ]
 }
 
-# 转换过程中将对深层的每一个字典进行递归替换 key 值，并返回一个新的对象
+# 转换过程中将递归对深层的每一个字典进行替换 key 值，并返回一个新的对象
 json.dumps(Converter.camelify(dict_obj), indent=2)
 
 """
