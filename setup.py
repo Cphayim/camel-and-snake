@@ -8,7 +8,7 @@ setup(
     description=(
         'camelCase to snake_case or snake_case to camelCase for Python dict object'
     ),
-    version='0.1.0',
+    version='0.1.2',
     author='Cphayim',
     author_email='admin@cphayim.me',
     maintainer='',
