@@ -4,6 +4,10 @@
 
 本项目旨在解决 camelCase 和 snake_case 相互转换的问题
 
+[![Build Status](https://travis-ci.org/Cphayim/camel-and-snake.svg?branch=master)](https://travis-ci.org/Cphayim/camel-and-snake)
+[![PyPI version](https://badge.fury.io/py/camel-and-snake.svg)](https://badge.fury.io/py/camel-and-snake)
+![Python version](https://img.shields.io/badge/python-3.3+-blue.svg)
+
 **支持 python3 以上版本**
 
 
